@@ -1,0 +1,24 @@
+header {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--gray-color);
+
+}
+
+.right-btns_row, .left-btns-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+.left-btns-row {
+    margin-left: 62px;
+}
+
+.right-btns-row {
+    margin-right: 62px;
+}

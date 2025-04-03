@@ -1,0 +1,83 @@
+:root {
+    --width: 18vw;
+}
+
+.card {
+    width: var(--width);
+    aspect-ratio: 25 / 22;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.photo_block {
+    width: 100%;
+    height: 68%;
+    background-color: #826565;
+}
+
+.text_block {
+    width: 100%;
+    height: 32%;
+    
+    background-color: var(--gray-color);
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text {
+    margin: 0;
+    margin-left: 1em;
+    margin-top: 0.5em;
+    font-size: 1em;
+    font-weight: 550;
+    font-family: inherit;
+    color: #242424;
+}
+
+.btns_row {
+    width: 100%;
+    display: flex;
+    margin: 10%;
+    
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn_more {
+    padding: 0.3em; 
+    /* margin: 1em;
+    margin-top: 0.2em; */
+
+    font-size: 0.8em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    background-color: #A0AFCC;
+    border-style: none;
+    color: #242424;
+    transition: background-color 0.25s;
+    &:hover {
+        background-color: var(--dark-color);
+    }
+}
+
+.buy {
+    background-color: var(--main-color);
+}
+
+.photo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

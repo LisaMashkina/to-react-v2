@@ -1,0 +1,17 @@
+.header_btn {
+    padding: 0.6em 1.2em;
+    margin: 10px 0; 
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    color: #6C6C6C;
+    background-color: rgba(255, 255, 255, 0);
+    border-style: none;
+    transition: border-color 0.25s;
+    &:hover {
+        background-color: rgba(70, 70, 70, 0.1);
+        transition: background-color 0.1s ease-in-out;
+        color: var(--dark-color);
+    }
+}
