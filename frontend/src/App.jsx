@@ -11,13 +11,13 @@ export default function App() {
   return (
     <>
       
-      <Header buttons_navbar= {buttons_navbar_fp} ></Header>
-      <Main></Main>
       <Routes>
-        <Route path="/" element={<Header buttons_navbar= {buttons_navbar_fp} ></Header>}></Route>
+        <Route path="/" element={<Home></Home>}></Route>
         {/* <Route path="/main" element={<Main></Main>}></Route> */}
         {/* <Route path="/profile" element={<Header buttons_navbar= {buttons_navbar_pp} ></Header>}></Route> */}
       </Routes>
+
+
     </>
   )
 }

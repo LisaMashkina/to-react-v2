@@ -1,7 +1,7 @@
 import './Main.css'
 import Cake_card from '../cards/Cake_card'
 import Master_card from '../cards/Master_card'
-import { cake_cards, master_cards } from "C:/Windows/System32/to-react-v2/src/data.js"
+import { cake_cards, master_cards } from "../../data.js"
 
 export default function Main() {
     return (
