@@ -1,12 +1,14 @@
 import Button from "../buttons/Button"
 import "./header.css"
 import Butt_header from "../buttons/header_btn"
+import Home from "C:/Windows/System32/to-react-v2/src/Home.jsx"
 
 export default function Header({ buttons_navbar }) {
   const i = Math.floor(buttons_navbar.length/2) + 1
   return (
     <header>
       <div className="left-btns-row">
+        <Home></Home>
         { buttons_navbar.slice(0, i).map((item, index) => {
           return <Butt_header key={index}>{ item }</Butt_header>
         }) }
