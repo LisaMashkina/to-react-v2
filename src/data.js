@@ -49,6 +49,8 @@ export const cake_cards = [
 
 ]
 
+
+
 export const master_cards = [
     {
         id: 1,
@@ -74,3 +76,42 @@ export const master_cards = [
     }
 
 ]
+
+
+import { useState, useEffect } from "react";
+
+const CakesList = () => {
+    const [cakes, setCakes] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        fetch("http://localhost:8000/cakes")  // Меняй на свой бэкенд
+            .then((response) => response.json())
+            .then((data) => {
+                setCakes(data);
+                setLoading(false);
+            })
+            .catch((err) => {
+                setError(err);
+                setLoading(false);
+            });
+    }, []);
+
+    if (loading) return <p>Загрузка...</p>;
+    if (error) return <p>Ошибка: {error.message}</p>;
+
+    return (
+        <div>
+            {cakes.map((cake) => (
+                <div key={cake.id}>
+                    <img src={cake.photo} alt={cake.text} width={150} />
+                    <h3>{cake.text}</h3>
+                    <p>{cake.more}</p>
+                </div>
+            ))}
+        </div>
+    );
+};
+
+export default CakesList;
