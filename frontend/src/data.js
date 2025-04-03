@@ -80,38 +80,19 @@ export const master_cards = [
 
 // import { useState, useEffect } from "react";
 
-// const CakesList = () => {
-//     const [cakes, setCakes] = useState([]);
-//     const [loading, setLoading] = useState(true);
-//     const [error, setError] = useState(null);
-
-//     useEffect(() => {
-//         fetch("http://localhost:8000/cakes")  // Меняй на свой бэкенд
-//             .then((response) => response.json())
-//             .then((data) => {
-//                 setCakes(data);
-//                 setLoading(false);
-//             })
-//             .catch((err) => {
-//                 setError(err);
-//                 setLoading(false);
-//             });
-//     }, []);
-
-//     if (loading) return <p>Загрузка...</p>;
-//     if (error) return <p>Ошибка: {error.message}</p>;
-
-//     return (
-//         <div>
-//             {cakes.map((cake) => (
-//                 <div key={cake.id}>
-//                     <img src={cake.photo} alt={cake.text} width={150} />
-//                     <h3>{cake.text}</h3>
-//                     <p>{cake.more}</p>
-//                 </div>
-//             ))}
-//         </div>
-//     );
+// const fetchCakes = async () => {
+//     try {
+//         const response = await fetch("http://localhost:8000/cakes"); // Укажи свой бекенд
+//         if (!response.ok) throw new Error("Ошибка загрузки данных");
+//         const data = await response.json();
+//         return data; // Возвращаем JSON
+//     } catch (error) {
+//         console.error("Ошибка при получении данных:", error);
+//         return null; // Если ошибка, вернём null
+//     }
 // };
+
+// export default fetchCakes;
+
 
 // export default CakesList;

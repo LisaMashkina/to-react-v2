@@ -62,7 +62,7 @@ def cake_ingrs_kb(cake_type, tastes):
             InlineKeyboardButton(text=f'==={str(elem).upper()}===', callback_data=Cake(action='elems', what=f'{elem}', dop=str(cake_type), index='').pack())
             )
         kb = add_tastes_to_main_kb(tastes[elem], kb, elem, cake_type)
-    kb.row(InlineKeyboardButton(text='Подтвердить заказ ✅', callback_data=Cake(action='confirm_order', what= '', dop = '', index='').pack(), web_app=WebAppInfo(url=''))) #TODO изменить url
+    kb.row(InlineKeyboardButton(text='Подтвердить заказ ✅', callback_data=Cake(action='confirm_order', what= '', dop = '', index='').pack(), url='https://youtube.com')) #TODO изменить url
     return kb.as_markup()
 
 
